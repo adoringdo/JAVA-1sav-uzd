@@ -71,7 +71,6 @@ public class savD1 {
             else {
                 System.out.println("Neteisingas loterijos numeris, iveskite dar karta");
                 tries--;
-                continue;
             }
         }
     }
