@@ -2,7 +2,6 @@ package Homework;
 
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
 
 public class savD1 {
     public static void main(String[] args) {
