@@ -23,8 +23,8 @@ public class GeoLocation {
     }
 
     public GeoLocation(GeoLocation info) {
-        this.lat = info.lat + (double)Math.round((Math.random()*(0.1-(-0.1)+1)+(-0.1)) * 1000000)/1000000;
-        this.lon = info.lon + (double)Math.round((Math.random()*(0.1-(-0.1)+1)+(-0.1)) * 1000000)/1000000;
+        this.lat = (double)Math.round((info.lat+(((Math.random()*(0.1-(-0.1)+1)+(-0.1)))))*1000000)/1000000;
+        this.lon = (double)Math.round((info.lon+(((Math.random()*(0.1-(-0.1)+1)+(-0.1)))))*1000000)/1000000;
         numLocations++;
     }
 
@@ -52,7 +52,7 @@ public class GeoLocation {
                         Math.cos(lat2);
         double rad = 6371;
         double c = 2 * Math.asin(Math.sqrt(a));
-        return (double)Math.round((rad * c) * 10)/10;
+        return Math.floor((rad * c) * 10) / 10.0;
     }
 
     public static int getNumLocations(){
